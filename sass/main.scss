@@ -1,10 +1,20 @@
+@import "variables";
+
+body {
+  font-family: $default-font;
+  font-size: $base-font-size;
+}
+
 .field-container {
   width: 420px;
   height: 312px;
+
   border: 1px solid #000;
   border-bottom: none;
 
   margin: 0 auto;
+
+  padding: 20px;
 
   &:first-child {
     margin-top: 100px;
@@ -12,5 +22,22 @@
 
   &:last-child {
     border-bottom: 1px solid #000;
+  }
+
+  h1 {
+    font-size: $base-font-size;
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    margin: 0 0 5px;
+  }
+
+  .address {
+    margin-top: 5px;
+
+    h2 {
+      font-size: $base-font-size * 0.875;
+    }
   }
 }
