@@ -37,14 +37,14 @@ body {
     margin-top: 5px;
 
     $address-title-width: 90px;
-    $address-title-margin: 10px;
 
     h2 {
-      margin: 0 $address-title-margin 0 0;
       font-size: $base-font-size * 0.875;
       text-transform: uppercase;
 
       width: $address-title-width;
+
+      margin: 0;
     }
 
     > div, h2 {
@@ -52,8 +52,39 @@ body {
     }
 
     .value {
-      width: $field-container-width - $address-title-width - $address-title-margin;
-      overflow: hidden;
+      $value-field-padding: 10px;
+
+      padding-left: $value-field-padding;
+      width: $field-container-width - $address-title-width - $value-field-padding;
+
+      input {
+        $input-width: $field-container-width - $address-title-width - $value-field-padding - 5px;
+        $postal-width: 100px;
+        $postal-margin: 15px;
+
+        width: $input-width;
+        border: none;
+
+        font-size: $base-font-size;
+
+        margin-bottom: 10px;
+
+        background-image: linear-gradient(to right, black 25%, rgba(255,255,255,0) 0%);
+        background-position: bottom;
+        background-size: 5px 1px;
+        background-repeat: repeat-x;
+
+        &.postal {
+          width: $postal-width;
+          margin-right: $postal-margin;
+
+          background-image: linear-gradient(to right, black 60%, rgba(255,255,255,0) 0%);
+        }
+
+        &.city {
+          width: $input-width - $postal-width - $postal-margin;
+        }
+      }
     }
   }
 }
