@@ -1,5 +1,16 @@
 .field-container {
-  width: 300px;
-  height: 214px;
+  width: 420px;
+  height: 312px;
   border: 1px solid #000;
+  border-bottom: none;
+
+  margin: 0 auto;
+
+  &:first-child {
+    margin-top: 100px;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid #000;
+  }
 }
