@@ -38,6 +38,12 @@ body {
 
     $address-title-width: 90px;
 
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
     h2 {
       font-size: $base-font-size * 0.875;
       text-transform: uppercase;
@@ -74,6 +80,10 @@ body {
         background-size: 5px 1px;
         background-repeat: repeat-x;
 
+        &.postal, &.city {
+          margin-bottom: 0;
+        }
+
         &.postal {
           width: $postal-width;
           margin-right: $postal-margin;
@@ -83,6 +93,20 @@ body {
 
         &.city {
           width: $input-width - $postal-width - $postal-margin;
+        }
+      }
+
+      > span {
+        display: inline-block;
+        font-size: $base-font-size * 0.75;
+        text-transform: lowercase;
+
+        &.postal {
+          margin-left: 16px;
+        }
+
+        &.city {
+          margin-left: 90px;
         }
       }
     }
