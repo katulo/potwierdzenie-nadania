@@ -6,8 +6,8 @@ body {
 }
 
 .field-container {
-  width: 420px;
-  height: 312px;
+  width: $field-container-width;
+  height: $field-container-height;
 
   border: 1px solid #000;
   border-bottom: none;
@@ -36,8 +36,24 @@ body {
   .address {
     margin-top: 5px;
 
+    $address-title-width: 90px;
+    $address-title-margin: 10px;
+
     h2 {
+      margin: 0 $address-title-margin 0 0;
       font-size: $base-font-size * 0.875;
+      text-transform: uppercase;
+
+      width: $address-title-width;
+    }
+
+    > div, h2 {
+      float: left;
+    }
+
+    .value {
+      width: $field-container-width - $address-title-width - $address-title-margin;
+      overflow: hidden;
     }
   }
 }
