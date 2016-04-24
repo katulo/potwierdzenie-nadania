@@ -45,3 +45,6 @@ fabric.properties
 
 node_modules/
 bower_components/
+
+### Out custom ignores ###
+css/

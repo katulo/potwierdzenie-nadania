@@ -1,0 +1,22 @@
+{
+  "name": "potwierdzenie-nadania",
+  "version": "0.0.1",
+  "description": "Generator potwierdzen nadania dla poczty.",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katulo/potwierdzenie-nadania.git"
+  },
+  "author": "Katarzyna Ulok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katulo/potwierdzenie-nadania/issues"
+  },
+  "homepage": "https://github.com/katulo/potwierdzenie-nadania#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.1",
+    "gulp-watch": "^4.3.5"
+  }
+}
